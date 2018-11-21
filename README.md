@@ -17,7 +17,7 @@ client = Client('SERVER_URL', 'ACCESS_TOKEN') # Host must have trailing slash
 ### Search product
 All
 ```
-response = client.search_product({'searchCriteria': ''})
+response = client.search_product({'searchCriteria': '[]'})
 ```
 
 Order by created_at, just one item
