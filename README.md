@@ -1,26 +1,26 @@
 # magento-python
 
-magento-python is an API wrapper for Magento written in Python
+magento-python是一个使用Python写的Magento2 API SDK
 
-## Installing
+## 安装
 ```
 pip install magento-python
 ```
 
-## Usage
+## 使用
 ```
 from magento.client import Client
 
 client = Client('SERVER_URL', 'ACCESS_TOKEN') # Host must have trailing slash
 ```
 
-### Search product
+### 查找产品
 All
 ```
-response = client.search_product({'searchCriteria': ''})
+response = client.search_product({'searchCriteria': '[]'})
 ```
 
-Order by created_at, just one item
+按created_at排序, 并只返回一条数据
 ```
 response = client.search_product({'searchCriteria[sortOrders][0][field]': 'created_at', 'searchCriteria[pageSize]': '1'})
 ```
