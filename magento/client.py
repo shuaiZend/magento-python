@@ -175,6 +175,17 @@ class Client(object):
         """
         return self._get('products/attribute-sets/sets/list', params=params)
 
+    def get_product_attributes_value(self, params=None):
+        """Use Code Get Product Attribute Value,Lable and more.
+
+        Args:
+            params:
+
+        Returns:
+            Json
+        """
+        return self._get('products/attributes/', params=params)
+
     def get_customer_groups(self, params=None):
         """Retrieve customer groups. The list of groups can be filtered to exclude the NOT_LOGGED_IN group
         using the first parameter and/or it can be filtered by tax class. This call returns an array of objects,
